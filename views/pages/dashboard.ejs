@@ -1,0 +1,57 @@
+<!--views/pages/index.ejs -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+   
+    <title>Training Hub</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+    <div class="container">
+      <h1>Training Hub</h1>
+    </div>
+    <br>
+    <div class="container">
+      <a href="/addemployee"><strong>Add Employee</strong></a>
+    </div>
+    <div class="container">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Employee #</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>email address</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+           <% employees.forEach((employees)=>{ %>
+              <tr>
+              <td><a href="employee/<%= employees._id %>"><%= employees.pnumber %></a></td>
+              <td><%= employees.lastname %></td> 
+              <td><%= employees.firstname %></td> 
+              <td><%= employees.email %></td>
+              <td><a href="#edit">edit</a> | <a href="#delete">delete</a></td>
+              </tr>
+          <% }); %>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    
+     
+
+    
+  </body>
+</html>

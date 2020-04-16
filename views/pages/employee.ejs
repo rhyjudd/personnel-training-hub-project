@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    
+    <title>Add a New Employee</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <div class="container">
+      <h1>
+        <%= employees.firstname %> <%= employees.lastname %>
+      </h1>
+      <br>
+        <%= employees.email %>
+      <br>
+        <%= employees.phonenumber %>
+      
+    </div>
+    <br>
+    <div class="container">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Duration</th>
+            <th>Date</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                <td>Brakes</td>
+                <td>2</td> 
+                <td>2/5/2019</td> 
+                <td>Makes technican brake certified</td>
+              </tr>
+          
+          
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="container">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Certification</th>
+            <th>Date Completed</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+                <td>ASE T2 Diesel Engines</td>
+                <td>1/24/2019</td> 
+              </tr>
+              <tr>
+                <td><a href="/addcerttoemp/<%= employees.id %>">Add Certification</a></td>
+                <td></td>
+              </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    
+  </body>
+</html>

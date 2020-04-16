@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    
+    <title>Add a New Employee</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+    <div class="container">
+      <h1>Add Certification</h1>
+    </div>
+    <br>
+    <div class="container">
+      <form action="/addcert" method=POST>
+        <div>         
+          <input type="text" class="form-control u-full-width" id="certname" name="certname" placeholder="Name of certification" required>
+        </div>
+        <input class="button-primary" type="submit" value="submit">
+      </form>      
+    </div>   
+  </body>
+</html>

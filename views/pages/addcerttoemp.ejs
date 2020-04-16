@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    
+    <title>Add A Certification to Employee</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+    <div class="container">
+      <h1>Add Certification to Employee Profile</h1>
+    </div>
+    <br>
+    <div class="container">
+      <form action="/addcerttoemp/<%= employeeID %>" method=POST>
+        <div>         
+           <label>Select Certification to add to employee profile:</label>
+             <select class="u-full-width" id="certname" name="certname" required>
+               <% certs.forEach((certs)=>{ %>
+                  <option value="<%= certs._id %>"><%= certs.name %></option>
+               <% }); %>
+               
+             </select>
+        </div>
+        <div>
+          <input type="date">
+        </div>
+        <input class="button-primary" type="submit" value="submit">
+      </form>      
+    </div>   
+  </body>
+</html>

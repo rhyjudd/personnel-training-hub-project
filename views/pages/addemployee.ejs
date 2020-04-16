@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    
+    <title>Add a New Employee</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+    <div class="container">
+      <h1>Add Employee</h1>
+    </div>
+    <br>
+    <div class="container">
+      <form action="/addemployee" method=POST>
+        <div class="row">
+          <div class="six columns">
+            <label>Employee Number:</label>
+            <input type="text" class="form-control u-full-width" id="pnumber" name="pnumber" placeholder="Employee #" required>
+          </div>
+          <div class="six columns">
+            <label>Last Name:</label>
+            <input type="text" class="form-control u-full-width" id="lastname" name="lastname" placeholder="" required>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="six columns">
+            <label>First Name:</label>
+            <input type="text" class="form-control u-full-width" id="firstname" name="firstname" placeholder="" required>
+          </div>
+          <div class="six columns">
+            <label>Password:</label>
+            <input type="password" class="form-control u-full-width" id="password" name="password" placeholder="" required>
+          </div>
+        </div>
+          
+        <div class="row">
+          <div class="six columns">
+            <label>Email Address:</label>
+            <input type="email" class="form-control u-full-width" id="email" name="email" placeholder="" required>
+          </div>
+          <div class="six columns">
+            <label>Phone Number:</label>
+            <input type="text" class="form-control u-full-width" id="phonenumber" name="phonenumber" placeholder="">
+          </div>
+        </div>
+        
+        
+        <input class="button-primary" type="submit" value="submit">
+        
+      </form>      
+    </div>
+    
+    
+    
+    
+    
+    
+
+   
+  </body>
+</html>

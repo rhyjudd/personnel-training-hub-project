@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Linking the skeleton CSS styleshet -->
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    
+    <title>Add a New Employee</title>
+  </head>
+  <body>
+    <header>
+      <%- include("../partials/header.ejs") %>
+    </header>
+    <br>
+    <div class="container">
+      <h1>Add Course</h1>
+    </div>
+    <br>
+    <div class="container">
+      <form action="#/addcourse" method=POST>
+        <div class="row">
+          <div class="six columns">
+            <label>Course Name:</label>
+          <input type="text" class="form-control u-full-width" id="coursename" name="coursename" required>    
+          </div>
+               
+        </div>
+        <div class="row">
+          <div class="three columns">
+             <label>Duration:</label>
+             <select class="u-full-width" id="courseduration" name="courseduration" required>
+               <option value="1">1 hr</option>
+               <option value="2">2 hrs</option>
+               <option value="3">3 hrs</option>
+               <option value="4">4 hrs</option>
+               <option value="5">5 hrs</option>
+               <option value="6">6 hrs</option>
+               <option value="7">7 hrs</option>
+               <option value="8">8 hrs</option>
+               <option value="9">9 hrs</option>
+               <option value="10">10 hrs</option>
+               <option value="11">11 hrs</option>
+               <option value="12">12 hrs</option>
+             </select>
+          </div>
+          <div class="three columns">
+            <label>Date Completed:</label>
+            <input type="date" class="form-control" id="coursedate" name="coursedate" required>
+          </div>  
+        
+          
+            
+         
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <label>Notes:</label>
+            <textarea class="form-control u-full-width" id="coursenotes" name="coursenotes"></textarea>
+          </div>
+          
+        </div>
+        
+        
+          
+        
+        
+        
+        <input class="button-primary" type="submit" value="submit">
+        
+      </form>      
+    </div>
+    
+    
+    
+    
+    
+    
+
+   
+  </body>
+</html>
